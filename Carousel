@@ -1,0 +1,49 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/carousel.js"></script>
+
+<div class="container">
+  <div class="row">  
+    <div class="col-md-12">
+      <div class="ad-carousel">
+        <img src="image1.jpg" class="img-responsive" alt="Ad Image 1" width="400" height="300">
+        <a href="http://www.adlink1.com" target="_blank">Link to Ad 1</a>
+        <img src="image2.jpg" class="img-responsive" alt="Ad Image 2" width="400" height="300">
+        <a href="http://www.adlink2.com" target="_blank">Link to Ad 2</a>
+        <img src="image3.jpg" class="img-responsive" alt="Ad Image 3" width="400" height="300">
+        <a href="http://www.adlink3.com" target="_blank">Link to Ad 3</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.ad-carousel {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px;
+}
+.ad-carousel img {
+    width: 400px;
+    height: 300px;
+    float: left;
+}
+.ad-carousel a {
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #000;
+    display: block;
+    padding: 10px 0;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+  $(".ad-carousel").carousel({
+    autoPlay: true,
+    interval: 3000
+  });
+});
+</script>

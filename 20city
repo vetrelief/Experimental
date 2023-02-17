@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>City Lookup</title>
+  </head>
+  <body>
+    <h1>City Lookup</h1>
+    <form>
+      <label>City: <input type="text" id="city" /></label>
+      <label>State: <input type="text" id="state" /></label>
+      <input type="button" id="goBtn" value="Go!" onClick="findCities()" />
+    </form>
+    <div id="results" style="display: none;">
+      <ol>
+        <!-- results will be added here -->
+      </ol>
+    </div>
+    <script>
+      function findCities() {
+        let city = document.getElementById('city').value;
+        let state = document.getElementById('state').value;
+        
+        // get the list of cities from an API
+        let request = new XMLHttpRequest();
+        request.open('GET', `https://myapi.com/cities?city=${city}&state=${state}`);
+        request.onload = function() {
+          let cities = JSON.parse(request.responseText);
+
+          // add the cities to the page
+          let listElement = document.getElementById('results');
+          listElement.style.display = 'block';
+          let listHtml = '';
+          for (let i = 0; i < cities.length; i++) {
+            let city = cities[i];
+            listHtml += `<li><a href="#" onClick="copyCity('${city}')">${city}</a></li>`;
+          }
+          listElement.innerHTML = listHtml;
+        };
+        request.send();
+      }
+
+      // copy a city to the clipboard
+      function copyCity(city) {
+        // copy the city name to the clipboard
+        navigator.clipboard.writeText(city).then(function() {
+          alert(`Copied ${city} to the clipboard.`);
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,3 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Document</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+	
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+li a {
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #f1f1f1;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 5px;
+}
+
+li a:hover {
+  background-color: #f5f5f5;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+font {
+  color: #990000;
+}
+</style>
+
 <h2>List Your Practice</h2>
 <p>If you would like to list your practice for sale, please fill out the contact form below.</p>
 <form action="submit_contact.php" method="POST">
@@ -113,3 +157,6 @@
     <li><a href="<?php echo VRS_RUNTIME_WWW::url_root(); ?>for_sale/ivc.phtml"><b>Guam</b></a>&nbsp(<font color="#990000">SOLD</font>)</li>
 	</ul>
 </p>
+
+</body>
+</html>

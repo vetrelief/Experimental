@@ -1,4 +1,41 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Header -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from test.vetrelief.com/virtual2/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Aug 2022 21:11:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- =======================================================
+  * LETS TRY THIS OUT MITCH!
+  ======================================================== -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Official VRS vrtl</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+     <!-- Vendor CSS Files -->
+     <!-- <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet"> -->
+     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+     
+     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+     <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800&amp;display=swap" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+ <!-- ======= Top Bar ======= -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/carousel.js"></script>
 
 <div class="container">
@@ -47,3 +84,200 @@ $(document).ready(function(){
   });
 });
 </script>
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="fixed-top">
+    <div class="container">
+
+      <!-- <h1 class="logo me-auto"><a href="index.html">Medilab</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- mobile-tab-logo -->
+      
+      <div class="mobile-nav-tab align-items-center">
+          <!-- navbar mobile -->
+          <a href="index.html" class="logo"><img src="assets/img/logo_main.png" alt="" class="img-fluid"></a>
+          <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+              <li><a class="nav-link scrollto active" href="/Pet-Parent/">Connect Now</a></li>
+              <li><a class="nav-link scrollto" href="#hero">What we treat</a></li>
+              <li><a class="nav-link scrollto" href="#">Pricing</a></li>
+              <li><a class="nav-link scrollto" href="#">About</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>   
+          </nav> 
+              <a href="#" class="login-btn scrollto" data-toggle="modal" data-target="#loginModal"><span class="d-md-inline">Login</a>
+
+              <a href="register.html" class="signup-btn scrollto"><span class="d-md-inline">Sign up</a>
+          <!-- navbar -->
+      </div>
+       
+      <!-- navbar pc -->
+      <div class="pc-nav-tab">
+        
+          <nav id="navbar" class="navbar order-last order-lg-0">
+
+            <div class="pc-nav">
+              <ul>
+                <li><a class="nav-link scrollto active" href="/pet_appointment/">Connect with a Vet Now</a></li>
+                
+              </ul>
+            </div>  
+            
+            <div class="logo-img">
+              <a href="index.html" class="logo"><img src="assets/img/logo_main.png" alt="" class="img-fluid"></a>
+            </div>  
+              
+
+            <div class="pc-nav">
+              <ul>
+                <li><a class="nav-link scrollto" href="#What-Treat">What we treat</a></li>
+                <li><a class="nav-link scrollto" href="#">Pricing</a></li>
+              </ul>
+
+              <i class="bi bi-list mobile-nav-toggle"></i> 
+
+              <a href="#" class="login-btn scrollto" data-toggle="modal" data-target="#loginModal"><span class="d-md-inline">Login</a>
+              <a href="register.html" class="signup-btn scrollto"><span class="d-md-inline">Sign up</a> 
+            </div>  
+
+          </nav> 
+            <!-- navbar -->
+        
+      </div>
+    
+    </div>
+  </header><!-- End Header -->
+
+
+
+<!-- ======= Start about us Section ======= -->
+
+<section id="about-us" class="about-us">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <img src="assets/img/about.png" alt="about us">
+      </div>
+      <div class="col-lg-6 about-us-text">
+        <!-- main-title -->
+          <div class="section-title-l">
+            <h2>About Us</h2>  
+            <p>Log in your pet. Connect with a vet.  What a relief.</p>     
+		        <p>Now <b>that's</b> a relief!</p>   
+            <a href="#" class="login-btn scrollto ml-0" data-toggle="modal" data-target="#loginModal">Login</a>
+            <a href="register.html" class="signup-btn scrollto" ><span class="d-md-inline">Sign up</a> 
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End about us Section -->
+
+</main><!-- End #main -->
+
+
+
+<!-- Footer -->
+
+ <!-- ======= Footer ======= -->
+ <footer id="footer">
+
+<div class="footer-top">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6 footer-contact">
+        <img src="assets/img/logo_main.png" alt="logo White">
+        <p>VetRelief.pet, in association with VetRelief.com. Serving the veterinary industry since 1990</p>
+        <!-- <ul>
+            <li><i class="bi bi-phone"></i><a href="tel:+1 949-899-8387">949-899-VETS</a></li>
+            <li><i class="bi bi-envelope"></i> <a href="mailto:info@vetrelief.com">info@vetrelief.com</a> </li>
+            <li><i class="bi bi-chat-dots"></i> <a href="tel:+90 392 815 89 90">+90 392 815 89 90</a> </li>             
+        </ul> -->
+      </div>
+
+      <div class="col-lg-4 col-md-6 footer-links">
+        <h4>Web Links</h4>
+        <ul>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">About Us</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Pricing</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="#">What We Treat</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-6 contact-info">
+        <h4>Contact Info</h4>
+        <ul>
+          <li><img src="assets/img/f-location-icon.png" alt="location" class="location"> <p> United States</p></li>
+          <li><img src="assets/img/f-call-icon.png" alt="location" class="call"> <a href="tel:+1 949-899-VETS">949-899-VETS</a></li>
+          <li><img src="assets/img/f-email-icon.png" alt="email" class="mail"> <a href="mailto:info@vetrelief.com">info@vetrelief.com</a></li>          
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="copyright d-md-flex justify-content-center py-2">  
+    <div class="copyright-text">
+       © 2022 VET RELIEF. - All Rights Reserved
+    </div>
+</div>
+</footer><!-- End Footer -->
+
+
+
+<!-- Vendor JS Files -->    
+    
+    <script src="assets/js/custom.js" crossorigin="anonymous"></script>
+    <script src="assets/js/video-play.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-login-modal">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <img src="assets/img/close_pop.png" alt="">
+          </button>
+          <div class="modal-body">
+            <h6 class="text-center font-weight-bold text-white mb-3">
+              Please Login
+            </h6>
+            <form id="login" name="login" action="/pet_login/">
+              <input type="hidden" name="LOGIN_FORM" value="">	  <fieldset class="textbox">
+                <div class="row">
+                  <div class="col-8 pr-0">
+                    <div class="logintext">
+                      <label class="username"> <span>Username</span>
+                      <input name="VET_AUTH_USER" type="text" id="loginP2" size="11" placeholder="Login">
+                      <label class="password"> <span>Password</span>
+                      <input name="VET_AUTH_PW" type="password" id="loginP" size="11" placeholder="Password">
+                    </div>
+                    
+                  </div>
+                  <div class="col-4 text-right">
+                    <div class="button" id="go">
+                      <input name="submit" type="image" src="assets/img/Go_Button.png" alt="submit" onclick="testXMLAuth()" width="50" height="50">
+                    </div>
+                  </div>
+                </div>
+                  <div class="form-bottom-links">
+                    <p><a class="forgot" href="https://vetrelief.com/reset.phtml">Forgot your password?</a></p>
+                  <p class="mb-0"><a class="forgot" href="https://vetrelief.com/register.phtml">New to VetRelief.com? Create an Account.</a></p>
+                  </div>
+              </fieldset>
+              
+                
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </body>
+
+<!-- Mirrored from test.vetrelief.com/virtual2/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Aug 2022 21:11:27 GMT -->
+</html>

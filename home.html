@@ -40,9 +40,6 @@ font {
 </style>
 <body>
 
-	
-
-
 <h2>List Your Practice</h2>
 <p>If you would like to list your practice for sale, please fill out the contact form below.</p>
 <form action="submit_contact.php" method="POST">
@@ -63,13 +60,21 @@ font {
     <input type="tel" name="phone_number" required/>
   </div>
   <div class="form-input">
-    <label>Message:</label>
-    <textarea name="message" rows="5" required></textarea>
+    <label>Description:</label>
+    <textarea name="description" rows="5" required></textarea>
+  </div>
+  <div class="form-input">
+    <label>Listing Options:</label>
+    <select name="listing_options">
+      <option value="photos+graphics">List practice with photos + Graphics - $199/month</option>
+      <option value="text_only">List practice (text only) - $135/month</option>
+    </select>
   </div>
   <div class="form-input">
     <input type="submit" value="Submit" />
   </div>
 </form>
+</body>
 
 <h1>Hospitals for Sale</h1>
 <p>

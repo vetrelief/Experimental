@@ -38,6 +38,77 @@ font {
   color: #990000;
 }
 </style>
+	
+	body {
+  font-family: sans-serif;
+}
+
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+
+p {
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+
+form {
+  width: 350px;
+  padding: 15px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+  background-color: rgba(255,255,255, .9);
+  border-radius: 5px;
+}
+
+
+.form-input {
+  margin-bottom: 1.2rem;
+}
+
+
+.form-input label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+
+.form-input input,
+.form-input textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+
+.form-input select {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+
+.form-input input[type="submit"] {
+  border: none;
+  padding: 0.7rem 1.2rem;
+  background-color: #0097e6;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 0.2rem;
+}
+```
 <body>
 
 <h2>List Your Practice</h2>
@@ -70,16 +141,17 @@ font {
       <option value="text_only">List practice (text only) <b>$135/month</b></option>
     </select>
   </div>
-  <div class="form-input">
-    <input type="submit" value="Submit" />
-  </div>
-</form>
-	<input type="file" id="addImagesButton" />
+		<input type="file" id="addImagesButton" />
 <script>
   document.getElementById('addImagesButton').onchange = function(e){
     // code for adding images goes here
   }
 </script>
+  <div class="form-input">
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+
 </body>
 
 <h1>Hospitals for Sale</h1>

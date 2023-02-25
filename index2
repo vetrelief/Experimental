@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>List your hospital</title>
+    </head>
+    <body>
+    <form method="post">
+    <div>
+        <label>Hospital Name</label>
+        <input type="text" name="hospitalName" />
+    </div>
+    <div>
+        <label>Contact Information</label>
+        <input type="text" name="contactInfo" />
+    </div>
+    <div>
+        <label>Listing Details</label>
+        <input type="text" name="listingDetails" />
+    </div>
+    <div>
+        <label>Description</label>
+        <textarea name="description"></textarea>
+    </div>
+    <div>
+        <label>Address</label>
+        <input type="text" name="address" />
+    </div>
+    <div>
+        <label>Phone Number</label>
+        <input type="tel" name="phoneNumber" />
+    </div>
+    <div>
+        <label>Office Hours</label>
+        <input type="text" name="officeHours" />
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+</form>
+
+    </body>
+</html>

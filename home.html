@@ -5,6 +5,11 @@
     <meta charset="utf-8">
 </head>
 	<style>
+
+body {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 255, 0.8));
+}
+		
 ul {
   list-style-type: none;
   margin: 0;
@@ -264,6 +269,86 @@ form {
       	<div class="vc_empty_space" style="height: 16px"><span class="vc_empty_space_inner"></span></div>
 		<div class="vc_btn3-container vc_btn3-center"><a onmouseleave="this.style.borderColor='#002D62'; this.style.backgroundColor='transparent'; this.style.color='#002D62'" onmouseenter="this.style.borderColor='#002D62'; this.style.backgroundColor='#002D62'; this.style.color='#ffffff';" style="border-color:#002D62; color:#002D62;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-outline-custom" href="https://www.omnipg-vet.com/listing/ohv116/" title="">LEARN MORE</a></div>
 		<div class="vc_empty_space" style="height: 16px"><span class="vc_empty_space_inner"></span></div>
+	
+		
+		  <table>
+        <tr>
+            <td>was RZ C</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>doctor canceled</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Mon, Mar-06-2023</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Wed, Mar-08-2023</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>=doctor acknowledge?</td>
+            <td>
+                <select onchange="updateValue('doctor-acknowledge', this.value)">
+                    <option value=""></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="N/A">N/A</option>
+                </select>
+                <input type="hidden" id="doctor-acknowledge" name="doctor-acknowledge">
+            </td>
+        </tr>
+        <tr>
+            <td>=dates reactivated?</td>
+            <td>
+                <select onchange="updateValue('dates-reactivated', this.value)">
+                    <option value=""></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="N/A">N/A</option>
+                </select>
+                <input type="hidden" id="dates-reactivated" name="dates-reactivated">
+            </td>
+        </tr>
+        <tr>
+            <td>=cancelation invoice to doc?</td>
+            <td>
+                <select onchange="updateValue('cancelation-invoice', this.value)">
+                    <option value=""></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="N/A">N/A</option>
+                </select>
+                <input type="hidden" id="cancelation-invoice" name="cancelation-invoice">
+            </td>
+        </tr>
+        <tr>
+            <td>=reverse churned?</td>
+            <td>
+                <select onchange="updateValue('reverse-churned', this.value)">
+                    <option value=""></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="N/A">N/A</option>
+                </select>
+                <input type="hidden" id="reverse-churned" name="reverse-churned">
+            </td>
+        </tr>
+        <tr>
+            <td>=mismatch?</td>
+            <td>
+                <select onchange="updateValue('mismatch', this.value)">
+                    <option value=""></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="N/A">N/A</option>
+                </select>
+                <input type="hidden" id="mismatch" name="mismatch">
+            </td>
+        </tr>
+    </table>
 	</div>
 </div>
 

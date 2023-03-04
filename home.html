@@ -313,6 +313,46 @@ form {
             <th>Task</th>
             <th>Completed?</th>
         </tr>
+	    <tr>
+            <td>was RZ C</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>doctor canceled</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Mon, Mar-06-2023</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Wed, Mar-08-2023</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>=doctor acknowledge?</td>
+            <td>
+                <select onchange="updateValue('doctor-acknowledge', this.value)">
+                    <option value=""></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="N/A">N/A</option>
+                </select>
+                <input type="hidden" id="doctor-acknowledge" name="doctor-acknowledge">
+            </td>
+        </tr>
+        <tr>
+            <td>=dates reactivated?</td>
+            <td>
+                <select onchange="updateValue('dates-reactivated', this.value)">
+                    <option value=""></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="N/A">N/A</option>
+                </select>
+                <input type="hidden" id="dates-reactivated" name="dates-reactivated">
+            </td>
+        </tr>
         <tr>
             <td>Task 1</td>
             <td>
@@ -333,6 +373,43 @@ form {
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                     <option value="N/A">N/A</option>
+			<tr>
+            <td>=cancelation invoice to doc?</td>
+            <td>
+                <select onchange="updateValue('cancelation-invoice', this.value)">
+                    <option value=""></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="N/A">N/A</option>
+                </select>
+                <input type="hidden" id="cancelation-invoice" name="cancelation-invoice">
+            </td>
+        </tr>
+        <tr>
+            <td>=reverse churned?</td>
+            <td>
+                <select onchange="updateValue('reverse-churned', this.value)">
+                    <option value=""></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="N/A">N/A</option>
+                </select>
+                <input type="hidden" id="reverse-churned" name="reverse-churned">
+            </td>
+        </tr>
+        <tr>
+            <td>=mismatch?</td>
+            <td>
+                <select onchange="updateValue('mismatch', this.value)">
+                    <option value=""></option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="N/A">N/A</option>
+                </select>
+                <input type="hidden" id="mismatch" name="mismatch">
+            </td>
+        </tr>
+
                 </select>
                 <input type="hidden" id="task2" name="task2">
             </td>

@@ -270,82 +270,83 @@ form {
 		<div class="vc_btn3-container vc_btn3-center"><a onmouseleave="this.style.borderColor='#002D62'; this.style.backgroundColor='transparent'; this.style.color='#002D62'" onmouseenter="this.style.borderColor='#002D62'; this.style.backgroundColor='#002D62'; this.style.color='#ffffff';" style="border-color:#002D62; color:#002D62;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-outline-custom" href="https://www.omnipg-vet.com/listing/ohv116/" title="">LEARN MORE</a></div>
 		<div class="vc_empty_space" style="height: 16px"><span class="vc_empty_space_inner"></span></div>
 	
-		
-		  <table>
+		 <title>Dropdown Menu Example</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        select {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            padding: 5px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function updateValue(id, value) {
+            document.getElementById(id).value = value;
+        }
+    </script>
+</head>
+<body>
+    <h1>Dropdown Menu Example</h1>
+    <table>
         <tr>
-            <td>was RZ C</td>
-            <td></td>
+            <th>Task</th>
+            <th>Completed?</th>
         </tr>
         <tr>
-            <td>doctor canceled</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Mon, Mar-06-2023</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Wed, Mar-08-2023</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>=doctor acknowledge?</td>
+            <td>Task 1</td>
             <td>
-                <select onchange="updateValue('doctor-acknowledge', this.value)">
+                <select onchange="updateValue('task1', this.value)">
                     <option value=""></option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                     <option value="N/A">N/A</option>
                 </select>
-                <input type="hidden" id="doctor-acknowledge" name="doctor-acknowledge">
+                <input type="hidden" id="task1" name="task1">
             </td>
         </tr>
         <tr>
-            <td>=dates reactivated?</td>
+            <td>Task 2</td>
             <td>
-                <select onchange="updateValue('dates-reactivated', this.value)">
+                <select onchange="updateValue('task2', this.value)">
                     <option value=""></option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                     <option value="N/A">N/A</option>
                 </select>
-                <input type="hidden" id="dates-reactivated" name="dates-reactivated">
+                <input type="hidden" id="task2" name="task2">
             </td>
         </tr>
         <tr>
-            <td>=cancelation invoice to doc?</td>
+            <td>Task 3</td>
             <td>
-                <select onchange="updateValue('cancelation-invoice', this.value)">
+                <select onchange="updateValue('task3', this.value)">
                     <option value=""></option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                     <option value="N/A">N/A</option>
                 </select>
-                <input type="hidden" id="cancelation-invoice" name="cancelation-invoice">
-            </td>
-        </tr>
-        <tr>
-            <td>=reverse churned?</td>
-            <td>
-                <select onchange="updateValue('reverse-churned', this.value)">
-                    <option value=""></option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                    <option value="N/A">N/A</option>
-                </select>
-                <input type="hidden" id="reverse-churned" name="reverse-churned">
-            </td>
-        </tr>
-        <tr>
-            <td>=mismatch?</td>
-            <td>
-                <select onchange="updateValue('mismatch', this.value)">
-                    <option value=""></option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                    <option value="N/A">N/A</option>
-                </select>
-                <input type="hidden" id="mismatch" name="mismatch">
+                <input type="hidden" id="task3" name="task3">
             </td>
         </tr>
     </table>

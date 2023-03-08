@@ -1,0 +1,139 @@
+<?php
+	/*
+		In: $id
+	*/
+	
+	INCLUDE_ONCE(GLOBAL_UNIX_PATH . "libs/class/VRS_JOB_DATA_SHIFT.php");
+	INCLUDE_ONCE(GLOBAL_UNIX_PATH . "libs/class/VRS_JOB_UTIL.php");
+	INCLUDE_ONCE(GLOBAL_UNIX_PATH . "libs/class/VRS_HTML_JOB_INFO.php");
+	INCLUDE_ONCE(GLOBAL_UNIX_PATH . "libs/class/VRS_JOB.php");
+	INCLUDE_ONCE(GLOBAL_UNIX_PATH . "libs/class/VRS_USER_MISMATCH.php");
+	
+	$site = VRS_RUNTIME_WWW::site();
+	$auth_login = VRS_RUNTIME_WWW::authenticated_login();
+	$id = $this->get_input('id');
+	$hosp_id = VRS_JOB_UTIL::query_hosp_id($site, $id);
+
+	if(VRS_USER_MISMATCH::exists($site, $hosp_id, $auth_login)) {
+		vrs_user_error("Job nonexistant or unavailable");			
+		return;
+	}
+
+	if(!($hosp_info = VRS_HOSP_UTIL::info_factory($site, $hosp_id))) {
+		trigger_error('no record found');
+	}
+	
+	if(!($job = VRS_JOB::open($site, $id))) {
+		vrs_user_error("Job Not Found.");
+		return;
+	}
+
+	// Set up a job info object.
+	if(!($date_info = VRS_JOB_DATA_SHIFT::FACTORY_JOB($site, $id))) {
+		echo "<br>Sorry this job is no longer available";
+		error_reporting(11);
+		return;
+	}
+?>
+<style>
+@media (max-width: 728px) {
+	#SideBar,
+	#menu,
+	#header,
+	#mainContent h1,
+	.GenLayout #footer,
+	#news-link {
+		display: none;
+	}
+	.GenLayout #mainContent,
+	.GenLayout #container {
+		width: 100%;
+	}
+	.GenLayout #mainContent {
+		width: 95%;
+		padding: 2.5%;
+	}
+	html {
+		background-color: #FFF;
+	}
+	.bid-header-text {
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	.continue-bid-button {
+		width: 100%;
+		text-align: center;
+	}
+	.continue-bid-button input,.btn_submit {
+		padding: 3px 50px;
+		font-size: 1.2em;
+		font-weight: bold;
+		margin-top:1em !important;
+		border-radius: 27px !important;
+		border: 2px solid !important;
+		padding: 5px;
+		background-image: #f1f1f1 !important;
+        background: #f1f1f1 !important;
+        background-color: #f1f1f1 !important;
+		color: black !important;
+	}
+}
+</style>
+<div class="bid-header-text">
+	Scroll down to View Dates/Create Bid
+</div>
+<form action="./" method="post">
+
+	<input type="hidden" name="page" value="job_bid">
+	<input type="hidden" name="id" value="<?php echo $id; ?>">
+	
+		<h1><?php echo VRS_SITE::LANG_FACILITY; ?> Details and Create a Bid</h1>
+	<p>
+	<?php if(isset($layout)) { echo "<input type=\"hidden\" name=\"layout\" value=\"$layout\">"; } ?>
+        </p>
+  <table width="350" cellpadding="3" cellspacing="0">
+<tr>
+    <th colspan="2"><h3>Relief Job ID: <?php echo $id; ?></h3></th>
+</tr>
+<tr bgcolor="#cccccc">
+    <th colspan="2"><?php echo VRS_SITE::LANG_FACILITY; ?> Details</th>
+</tr>
+</table>
+<?php 
+	// echo 
+	echo VRS_HTML_JOB_INFO::view($site, 'facility_detail', $hosp_info);	
+
+	echo "<br><br>";		
+
+	echo VRS_HTML_JOB_INFO::view($site, 'blurb', $job->blurb());	
+
+?>
+<br />
+<table width="350" cellpadding="3" cellspacing="0">
+<tr bgcolor="#cccccc">
+<th colspan="3">Create a bid by selecting your dates, <br /> then click Continue Bid.</th>
+</tr>
+<tr>
+<th>Select Date(s)</th>
+<th>Date</th>
+<th>Shift</th>
+</tr>
+
+<?php
+	foreach($date_info as $tmpd) {
+		$tmp_date_object = New DateTime($tmpd['date'], New DateTimeZone(GLOBAL_APP_TIMEZONE));
+		 echo "<tr>
+              <td><input type=\"checkbox\" name=\"jobdatetime[]\" value=\"" . $tmpd['date'] . ":" . $tmpd['hours'] . "\"</td>
+              <td>" . $tmp_date_object->format(VRS_SITE::D_FMT_LONG) . "</td>
+              <td>" . $tmpd['hours'] . "</td>
+          </tr>";  
+	}				
+?>
+
+</table>
+
+<br />
+<div class="continue-bid-button"><input type="submit" class="btn_submit" value="Continue Bid"></div>
+
+</form>
